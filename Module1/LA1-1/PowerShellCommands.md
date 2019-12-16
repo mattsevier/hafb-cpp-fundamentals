@@ -20,3 +20,12 @@ $ rm # remove / delete file/directory
 $ g++ main.cpp -o main
 # To run
 $ ./main.exe
+
+## C++ File Template
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    return 0;
+}
