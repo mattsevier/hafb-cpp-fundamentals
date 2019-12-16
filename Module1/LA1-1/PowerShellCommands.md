@@ -30,6 +30,14 @@ $ g++ main.cpp -o main
 # To run
 $ ./main.exe
 
+## g++ for 2 files
+For example, if oyu have a library under the function.cpp and function.h files and you have a driver under run_functions.cpp you need to compile as follows:  
+-to compile list all source (cpp) files
+-o for output file name
+$ g++ functions.cpp run_functions.cpp -o run_functions
+-to run
+$ ./run_functions.exe
+
 ## C++ File Template
 ```cpp
 #include <iostream>
@@ -47,5 +55,6 @@ int main()
 // using plugin doxygen documentation generator
 //run at the beginning of the code - /** (ENTER) to generate documentation
 ```
+//epitech header
 Markdown all in one plugin
 cmake and cmake tools plugins (search cmake, first two)
