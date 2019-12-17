@@ -21,3 +21,11 @@ void UpdateStep(int& step)// take the address of the parameter
     step += 1;
     cout << "New step: " << step << endl;
 }
+
+void ClearElements(std::array<int,10> &nums)//overwrite all values
+{
+  for(int index=0; index < nums.size(); ++index)
+  {
+    nums[index] = -99;//set value to -99
+  }
+}
