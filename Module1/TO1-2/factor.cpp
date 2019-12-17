@@ -20,3 +20,41 @@ void FactorMod3()
         cout << "Result is: " << count << endl;
     
 } 
+/**
+ * @brief Calculate the number of instances divisible by input parameter
+ * 
+ * @param mod_number The divisible number
+ */
+void FactorModX(int mod_number)
+{
+    //Anything in this function already knows about mod_number
+     unsigned int count = 0;
+    for(unsigned int x = 1; x <= 30; ++x)
+    {
+        if (x % mod_number == 0)
+        {
+            count++;
+        }
+    }
+        cout << "Result is: " << count << endl;
+}
+
+/**
+ * @brief Calculate the number of instances of divisible by in a specified range
+ * 
+ */
+
+void FactorModXRange(int mod_number, int max_range)
+
+{
+    //Anything in this function already knows about mod_number and max_range
+     unsigned int count = 0;
+    for(unsigned int x = 1; x <= max_range; ++x)
+    {
+        if (x % mod_number == 0)
+        {
+            count++;
+        }
+    }
+        cout << "Result is: " << count << endl;
+}
