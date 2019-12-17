@@ -46,6 +46,7 @@ void FactorModX(int mod_number)
 
 void FactorModXRange(int mod_number, int max_range)
 
+
 {
     //Anything in this function already knows about mod_number and max_range
      unsigned int count = 0;
@@ -57,4 +58,26 @@ void FactorModXRange(int mod_number, int max_range)
         }
     }
         cout << "Result is: " << count << endl;
+}
+
+/**
+ * @brief Get the Factor Mod X Range object and return count
+ * 
+ * @param mod_number number divisible by
+ * @param max_range range to check within
+ * @return unsigned int the count
+ */
+unsigned int GetFactorModXRange(int mod_number, int max_range)
+{
+    //Anything in this function already knows about mod_number and max_range
+     unsigned int count = 0;
+    for(unsigned int x = 1; x <= max_range; ++x)
+    {
+        if (x % mod_number == 0)
+        {
+            count++;
+        }
+    }
+        cout << "Result is: " << count << endl;
+        return count;
 }
