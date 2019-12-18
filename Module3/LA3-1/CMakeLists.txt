@@ -2,14 +2,18 @@
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
 # project name and language
-project(CA0.1 LANGUAGES CXX)
+project(LA2.3 LANGUAGES CXX)
 
-# require C++11
-set(CMAKE_CXX_STANDARD 11)
+# require C++14
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Define binary and library paths according to GNU standards:
+include(GNUInstallDirs)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR})
 
-# main code with ouput name: ca1
-# Note: In windows, the executable name will be: ca1.exe
-add_executable(pa1 main.cpp)
+# Add source directory
+add_subdirectory(src)
