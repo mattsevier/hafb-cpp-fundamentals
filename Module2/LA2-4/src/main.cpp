@@ -1,8 +1,11 @@
 #include <iostream>
 #include "carton.h"
+#include <array>
+
 
 
 //using namespace std;
+const int kMaxSize = 10;
 
 int main() {
   
@@ -24,13 +27,25 @@ box.ShowInfo(); //display object info
   Carton box2(34,89,11);
   box2.ShowInfo();
 
-  // create a Carton object using the other constructor
+  Carton box3(5,6,2); //example of negative number to throw an exception
+  box3.ShowInfo();
 
+  // create a Carton object using the other constructor
   // create an array of Cartons
+  std::array<Carton, kMaxSize> boxes;
+  
+
+  
 
   // add some valid elements to the array
 
+  boxes[0]=Carton(12,21,52);
+
   // loop through the array
+  for(auto box : boxes)
+  {
+    box.ShowInfo();
+  }
 
   // print out the volume of packages
 
