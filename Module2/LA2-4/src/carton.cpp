@@ -94,3 +94,9 @@ void Carton::ShowInfo()
 double Carton::Volume() const{
     return length_*width_*height_;
 }
+
+//capture output in a outstring
+void Carton::WriteData(std::ostream &out) const
+{
+    out << length_ << "," << width_ << "," <<height_ << "," <<Volume() << std::endl;
+}

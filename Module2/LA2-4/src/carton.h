@@ -37,6 +37,8 @@ class Carton
         void ShowInfo();
         void SetMeasurements(double length, double width, double height);
         double Volume() const;//making the function read only for what it can extract
+
+        void WriteData(std::ostream &out) const;
         
 
 

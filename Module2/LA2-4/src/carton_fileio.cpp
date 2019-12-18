@@ -13,7 +13,7 @@ std::string ReadDataFormatFromFile(std::string filename,
      std::string message = "";
 
      double side1, side2, side3;//read data from file
-     while(rec_num <KmaxArraySize && data_input >> side1)
+     while(rec_num <kMaxArraySize && data_input >> side1)
      {
          data_input >> side2 >> side3;
          //load data into array
@@ -37,7 +37,7 @@ std::string ReadDataFormatFromFile(std::string filename,
  }
 
  void WriteData(std::string filename,
- std::array<Carton, kMaxArraySize>& cartons, int& rec_num);
+ std::array<Carton, kMaxArraySize>& cartons, int& rec_num)
  {
      std::ofstream file_out(filename);
      for(int index =0; index < rec_num; ++index)
