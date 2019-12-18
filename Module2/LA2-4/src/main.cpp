@@ -7,9 +7,18 @@
 int main() {
   
   Carton box;
-  std::cout << "Box height " << box.height() << std::endl;
-  std::cout << "Box width " << box.width() << std::endl;
-  std::cout << "Box length " << box.length() << std::endl;
+  // std::cout << "Box height " << box.height() << std::endl;
+  // std::cout << "Box width " << box.width() << std::endl;
+  // std::cout << "Box length " << box.length() << std::endl;
+
+  box.ShowInfo(); //display object info
+
+  
+  box.set_width(12.5);
+  box.set_length(10.9);
+  box.set_height(23);
+
+box.ShowInfo(); //display object info
   
   // create a Carton object using the default constructor
 
