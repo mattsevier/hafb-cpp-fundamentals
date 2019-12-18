@@ -21,6 +21,8 @@ int main() {
 box.ShowInfo(); //display object info
   
   // create a Carton object using the default constructor
+  Carton box2(34,89,11);
+  box2.ShowInfo();
 
   // create a Carton object using the other constructor
 

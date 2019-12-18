@@ -14,6 +14,7 @@ class Carton
     public:
         //constructor to build or create the object
         Carton();
+        Carton(double length, double width, double height);
         //Getters which are functions or at least act like functions
         double length(); 
         double width(); 

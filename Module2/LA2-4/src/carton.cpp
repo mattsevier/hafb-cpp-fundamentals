@@ -10,6 +10,13 @@ Carton::Carton()
     width_ = 0;
     length_ = 0;
 }
+//second constructor
+Carton::Carton(double length, double width, double height)
+{
+    height_=height;
+    width_=width;
+    length_=length;
+}
 
  double Carton::length()
  {
