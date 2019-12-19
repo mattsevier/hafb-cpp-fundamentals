@@ -56,7 +56,7 @@ TEST_CASE("Test - Operator", "[sub]")
   Distance d3;
   // Act
   d3 = d1 + d2;
-  d3 = d1 - d2;
+  //d3 = d1 - d2;
   
   // Assert
   CHECK(d3.feet() ==  3); // compare two strings
