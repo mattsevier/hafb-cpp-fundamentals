@@ -18,6 +18,10 @@ void set_feet(int feet) {feet_ = feet;}
 float inches() const {return inches_;}
 void set_inches(float inches) {inches_ = inches;}
 
+Distance operator +(Distance d2) const;//only need one input since a distance 
+//is calling this, it is calling it on itself.  Constant so it can't change d1 and d2 in main by accident
+
+
 //Other methods
 void ShowDist() const;
 

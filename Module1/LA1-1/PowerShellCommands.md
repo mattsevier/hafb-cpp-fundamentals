@@ -64,7 +64,7 @@ cmake and cmake tools plugins (search cmake, first two)
 
 ### cmake
 to build a project we need all the rules to be set under `CMakeLists.txt` file
--create a build folder $ mkdir build
+-create a build folder $ mkdir build //should be on same level as src
 -go to the build dir $cd build
 -Run cmake: $cmake .. -G "MinGW Makefiles" The dot-dot is because your CMakeLists.txt is one folder up
 - build or compile your code $cmake --build .  The dot means to build in pwd.  
