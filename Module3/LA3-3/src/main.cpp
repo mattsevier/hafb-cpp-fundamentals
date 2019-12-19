@@ -5,10 +5,10 @@ using namespace std;
 // Main Function
 int main() 
 {
-  Distance d1(34,9.5);
+  Distance d1(10,6);
   d1.ShowDist();
 
-  Distance d2(10,8.5);
+  Distance d2(1,6);
   Distance d3;
   d2.ShowDist();
 
@@ -20,6 +20,10 @@ int main()
   d4.ShowDist();
 
   std::cout << d4 << std::endl;
+
+  Distance d5;
+  d5 = d1 - d2;
+  d5.ShowDist();
 
   return 0;
 }
