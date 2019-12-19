@@ -10,7 +10,8 @@ float inches_;
 public:
 Distance() : feet_(0), inches_(0) {}
 Distance(int feet, float inches) : feet_(feet), inches_(inches) {}
-~Distance() {std::cout <<"Bye\n";}
+Distance(const Distance& dist);//copy constructor
+~Distance() {}//could include std::cout <<"Bye\n"; in curly brackets
 //setter and getter
 int feet() const {return feet_;}
 void set_feet(int feet) {feet_ = feet;}
@@ -25,7 +26,8 @@ friend std::ostream &operator <<(std::ostream& os, const Distance& distance); //
 //for safety but pass by reference for speed
 //this is a friend that is returning the address for an output stream,  not the actual stream
 
-Distance operator -(Distance d2) const;
+//Distance operator -(Distance d2) const;
+friend Distance operator -(Distance lhs, Distance rhs); //friend operator
 void update_distance(int ft, float in);
 
 //Other methods
@@ -34,5 +36,5 @@ void ShowDist() const;
 bool operator < (Distance rhs) const; //compare object
 bool operator == (Distance rhs) const; //compare object
 
-
+Distance operator =(Distance& rhs);
 };

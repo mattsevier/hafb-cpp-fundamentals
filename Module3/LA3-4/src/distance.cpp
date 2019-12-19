@@ -34,17 +34,30 @@ Distance Distance::operator +(Distance d2) const
     // return temp;
     return Distance(feet, inches); //rewrite previous two lines
 }
-Distance Distance::operator -(Distance d2) const
-{
-    int feet = feet_ - d2.feet_;
-    float inches = inches_ - d2.inches_;
-    if (inches < 0)
+// Distance Distance::operator -(Distance d2) const
+// {
+//     int feet = feet_ - d2.feet_;
+//     float inches = inches_ - d2.inches_;
+//     if (inches < 0)
+//     {
+//         inches +=12.0;
+//         feet = feet - 1;
+//     }
+//     return Distance(feet, inches);
+// }
+    Distance operator -(Distance lhs, Distance rhs)
     {
-        inches +=12.0;
-        feet = feet - 1;
+    int ft = lhs.feet_ - rhs.feet_;
+    float in = 0;
+    if (lhs.inches_ < rhs.inches_)
+    {
+        ft -= 1;
+        in = (lhs.inches_ + 12) - rhs.inches_;
+        
     }
-    return Distance(feet, inches);
+    return Distance(ft, in);
 }
+
 
 // Distance Distance::operator -(Distance d2) const //class solution
 // {
@@ -94,4 +107,20 @@ Distance Distance::operator -(Distance d2) const
         float ft1 = feet_ + inches_ /12.0;
         float ft2 = rhs.feet_ + rhs.inches_ /12.0;
         return (ft1 == ft2) ? true : false;//form of if / else
+    }
+
+    Distance Distance::operator =(Distance& rhs)
+    {
+        std::cout<<"assignment operator invoked!" << std::endl;
+        feet_ = rhs.feet_;
+        inches_ = rhs.inches_;
+        return Distance(feet_, inches_);
+    }
+
+//copy constructor
+    Distance::Distance(const Distance& dist)
+    {
+        std::cout << "Copy constructor invoked" << std::endl;
+        feet_ = dist.feet_;
+        inches_ = dist.inches_;
     }
